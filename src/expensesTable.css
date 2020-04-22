@@ -1,0 +1,16 @@
+table{
+    overflow-y:scroll;
+    font-weight:normal;
+    height: 200px;
+    display:block;
+    margin-top:50px;
+    position: relative;
+}
+
+th {
+    background-color: rgba(111, 195, 157, 0.53);
+    position: sticky;
+    top: 0;
+    font-weight: normal;
+}
+
