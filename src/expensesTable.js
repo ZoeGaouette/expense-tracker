@@ -3,6 +3,7 @@ import {exps} from './App';
 import Add from './add';
 import jQuery from "jquery";
 import './expensesTable.css';
+import Remove from './remove';
 window.$ = window.jQuery = jQuery;
 
 class ExpensesTable extends React.Component {
@@ -12,6 +13,10 @@ class ExpensesTable extends React.Component {
         this.renderTableData = this.renderTableData.bind(this);
     }
 
+
+    /*
+    Fills table with expense data
+     */
     renderTableData() {
         window.$("#expenses").find("tr:gt(0)").remove();
         let table = document.getElementById("expenses");
@@ -26,30 +31,39 @@ class ExpensesTable extends React.Component {
         }
     }
 
+    /**
+     * Renders react component
+     */
     render() {
         return (
             <body>
             <div>
-                <div>
-                    <Add onClick = {this.renderTableData}> </Add>
+                <div id={'d1'}>
+                    <div id={'d3'}>
+                        <Add onClick = {this.renderTableData}> </Add>
+                    </div>
+                    <div id={'d4'}>
+                        <Remove onClick={this.renderTableData}> </Remove>
+                    </div>
                 </div>
-                <h1 id='title' style={{fontSize:"30px"}}>Expenses </h1>
-                <table id='expenses'>
-                    <thead id='head'>
-                    <tr>
-                        <th>Name</th>
-                        <th>Cost</th>
-                        <th>Category</th>
-                    </tr>
-                    </thead>
-                    <tbody id='body'>
-                    </tbody>
-                </table>
+                <div id={'d2'}>
+                    <h1 id='title' style={{fontSize:"30px"}}>Expenses </h1>
+                    <table id='expenses'>
+                        <thead id='head'>
+                        <tr id ={'columns'}>
+                            <th>Name</th>
+                            <th>Cost</th>
+                            <th>Category</th>
+                        </tr>
+                        </thead>
+                        <tbody id='body' style={{fontSize:"10px"}}>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             </body>
         )
     }
-
 }
 
 export default ExpensesTable;
