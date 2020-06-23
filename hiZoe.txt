@@ -1,0 +1,7 @@
+Hi Zoe
+Hope Im not bothering you
+I decided I should probably fiugre how forking works on git hub
+And instead of being boring and usign one of github's educational repositories
+I thought I'd say hi
+
+HI ZOE!
